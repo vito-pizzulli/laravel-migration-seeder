@@ -20,7 +20,7 @@ Ogni treno dovrà avere:</p>
 - In orario
 - Cancellato
 
-<p>È probabile che siano necessarie altre colonne per far funzionare la tabella nel modo corretto :occhiolino:<br>
+<p>È probabile che siano necessarie altre colonne per far funzionare la tabella nel modo corretto.<br>
 Inserite inizialmente pochi dati di esempio a mano, come preferite, tramite PhpMyAdmin.</p>
 
 ## Milestone 2
