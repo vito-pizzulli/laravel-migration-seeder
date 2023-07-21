@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('agency', 50);
             $table->string('departure_station', 50);
             $table->string('arrival_station', 50);
-            $table->time('departure_time');
-            $table->time('arrival_time');
+            $table->datetime('departure_time');
+            $table->datetime('arrival_time');
             $table->smallInteger('train_code')->unsigned();
             $table->tinyInteger('carriages_number')->unsigned();
             $table->boolean('isOnTime');
