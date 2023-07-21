@@ -14,7 +14,7 @@ class TrainSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
         $agencies = [
             "Trenitalia",
@@ -36,5 +36,22 @@ class TrainSeeder extends Seeder
             "Napoli Centrale",
             "Bari Centrale"
         ];
+
+        for ($i = 0; $i < 50; $i++) {
+            $newTrain = new Train();
+            $newTrain->agency = $faker->randomElement($agencies);
+            $newTrain->departure_station = $faker->randomElement($stations);
+            do {
+                $newTrain->arrival_station = $faker->randomElement($stations);
+            } while ($newTrain->arrival_station === $newTrain->departure_station);
+            $newTrain->departure_time = $faker->dateTimeBetween('2023-07-01', '2023-07-31');
+            $newTrain->arrival_time = clone $newTrain->departure_time;
+            $newTrain->arrival_time->modify("+{$faker->numberBetween(1, 5)} hours");
+            $newTrain->train_code = $faker->numberBetween(0, 9999);
+            $newTrain->carriages_number = $faker->numberBetween(5, 15);
+            $newTrain->isOnTime = $faker->numberBetween(0, 1);
+            $newTrain->isCancelled = $faker->numberBetween(0, 1);
+            $newTrain->save();
+        }
     }
 }
