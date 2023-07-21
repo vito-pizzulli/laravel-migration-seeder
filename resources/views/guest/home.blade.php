@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Homepage')
+@section('title', 'Laravel Migration Seeder - Trains')
 
 @section('main-section')
     <div class="card-container d-flex justify-content-center flex-wrap">
