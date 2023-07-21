@@ -1,1 +1,43 @@
 @import "~bootstrap/scss/bootstrap";
+
+body {
+    background-color: #0d121c;
+
+    header {
+        height: 15vh;
+        background-color: black;
+
+        h1 {
+            color: skyblue;
+        }
+    }
+
+    main {
+        height: 85vh;
+        background-image: url(../img/train.gif); /* image source: https://www.reddit.com/r/PixelArt/comments/ola610/cc_pixel_train/ */
+        background-size: cover;
+        overflow-y: scroll;
+
+        div.card-container {
+            width: 60%;
+            margin: auto;
+
+            div.card {
+                background-color: rgba(0, 0, 0, 0.7);
+        
+                p {
+                    color: white;
+    
+                    span {
+                        color: skyblue;
+                        text-transform: uppercase;
+                    }
+                }
+    
+                hr {
+                    border-bottom: 3px solid skyblue;
+                }
+            }
+        }
+    }
+}
